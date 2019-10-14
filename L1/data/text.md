@@ -48,7 +48,7 @@ Assembler and emulator for simple assembly language called MARIE.
 
 - C++17
 
-## Planetary systems simulator
+## Gravity - planetary systems simulator
 
 Desktop application that lets user add celestial bodies, set their sizes and weights and fly around, observing how they interact with each other. With two friends we wrote it during second semester, for a physics course.
 
