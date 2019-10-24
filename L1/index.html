@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf−8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta charset="utf-8">
 		<title>Tomasz Beneś - Home</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<meta name="viewport"content="width=device-width">
 	</head>
-	<body class="background">
-		<h2>Tomasz Beneś - Home Page</h2>
-		<article>
-			<aside>
-				<img src="data/IMG_20190501_140619.jpg" style="width:461px;height:346px;" class="rotate90"/>
-			</aside>
-			<h3>About me</h3>
-			<footer>
-				Contact: tomasz.benes@email.com, 987654321
-			</footer>
-		</article>
+	<body>
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1>Tomasz Beneś</h1>
+				</div>
+				<nav>
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="interests.html">Interests</a></li>
+						<li><a href="projects.html">Projects</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="showcase">
+			<div class="container">
+				<img src="./img/cookie1.png">
+				<span>
+					<p>Student of Computer Science, on Faculty of Fundamental Problems of Technology, Wrocław University of Science and Technology since 2017.</p>
+					<p>Junior C++ Engineer in Nokia Solutions and Networks.</p>
+				</span>
+			</div>
+		</section>
+		<section id="quote">
+			<div class="container">
+				<p>
+					My favorite quote.
+				</p>
+			</div>
+		</section>
+		<section id="boxes">
+			<div class="container">
+				<div class="box">
+						<img src="./img/logo_cpp.png">
+					<h3>C++</h3>
+					<p>
+						C++ was always my favorite language, and the one I know the best. I love using bleeding edge technologies, the freedom it provides and huge range of possibilities.
+					</p>
+				</div>
+				<div class="box">
+						<img src="./img/logo_lua.png">
+					<h3>Lua</h3>
+					<p>
+						I've met Lua in PC game once ago, and absolutely loved it. The ease of use and great integration with C++ made me use it as extension or configuration language for most of my projects.
+					</p>
+				</div>
+				<div class="box">
+					<img src="./img/logo_game.png">
+					<h3>Game Development</h3>
+					<p>
+						Computer graphics and game development have always been among my main interests and are the greatest career goal.
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>Tomasz Beneś, Copyright &copy; 2019</p>
+			<p>tomasz.benes@email.com</p>
+		</footer>
 	</body>
 </html>
