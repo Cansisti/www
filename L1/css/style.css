@@ -11,7 +11,7 @@ body {
 	overflow: hidden;
 }
 
-ul {
+header ul {
 	margin: 0;
 	padding: 0;
 }
@@ -82,19 +82,19 @@ header .current a {
 }
 
 #boxes {
-	margin-top: 20px;
+	margin-top:20px;
 }
 
 #boxes .box {
 	float: left;
+	text-align: center;
 	width: 32%;
 	padding: 10px;
-	text-align: center;
+	min-width: 300px;
 }
 
 #boxes .box img {
 	width: 90px;
-	height: 90px;
 }
 
 footer {
