@@ -21,10 +21,59 @@
 				</nav>
 			</div>
 		</header>
-
+		<main>
+			<article class="container">
+				<h3>Sailing Assistant</h3>
+				<p>Mobile application to track and analyse sensor readings of a yacht. It was a four man project that took place in 4th semester of my studies.</p>
+				<h4>Used technologies</h4>
+				<ul>
+					<li>Kotlin</li>
+					<li>Firebase</li>
+					<li>REST API</li>
+					<li>Google Maps</li>
+					<li>GitHub</li>
+				</ul>
+				<p>
+					Main idea behind this project was ease of data analyse in outdoor conditions. It's more comfortable to use smartphone in the marina or at sea.<br>
+					Our application takes data like gps coordinates, wind speed, boat speed, tension on stays from network database, where boat's computer puts it, and shows an interactive path or set of graphs at given point of time.
+				</p>
+				<p>One of important tasks in this project was to make drawing the path from gps fast enough, so moving the screen does not freeze whole application. This short part of code takes care of it:</p>
+				<code>
+						fun drawPathDetailed() {<br>
+						&nbsp;val t = object: Thread() {<br>
+						&nbsp;&nbsp;override fun run() {<br>
+						&nbsp;&nbsp;&nbsp;super.run()<br>
+						&nbsp;&nbsp;&nbsp;val p = PolylineOptions().width(5.0f).color(Color.BLUE)<br>
+						&nbsp;&nbsp;&nbsp;for( i in 0..(pointList.size-2) ) {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;p.add( LatLng( pointList[i]!!.latitude, pointList[i]!!.longitude ), LatLng( pointList[i+1]!!.latitude, pointList[i+1]!!.longitude ) )<br>
+						&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;runOnUiThread( object: Runnable {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;override fun run() {<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.clear()<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.addPolyline( p )<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+						&nbsp;&nbsp;&nbsp;} )<br>
+						&nbsp;&nbsp;}<br>
+						&nbsp;}<br>
+						}
+				</code>
+			</article>
+			<article class="container">
+				<h3>Gravity</h3>
+				<p>Desktop application that lets user add celestial bodies, set their sizes and weights and fly around, observing how they interact with each other. With two friends we wrote it during second semester, for a physics course.</p>
+				<h4>Used technologies</h4>
+				<ul>
+					<li>C++</li>
+					<li>Unreal Engine 4</li>
+				</ul>
+				<p>
+					Gravity provides a nice way to add objects, with some pre-defined sets as well.
+				</p>
+				<img src="./img/gravity.png">
+			</article>
+		</main>
 		<footer>
 			<p>Tomasz Beneś, Copyright &copy; 2019</p>
-			<p>tomasz.benes@email.com</p>
-		</footer>
+			<p><a href="https://github.com/Cansisti " target="_blank">https://github.com/Cansisti</a></p>		</footer>
 	</body>
 </html>
