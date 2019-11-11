@@ -92,7 +92,7 @@ header .current a {
 #boxes .box {
 	float: left;
 	text-align: center;
-	width: 32%;
+	width: 30%;
 	padding: 10px;
 	min-width: 300px;
 }
