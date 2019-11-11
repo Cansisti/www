@@ -1,3 +1,5 @@
+@import	url(desktop.css);
+
 body {
 	font: 15px/1.5 Arial, Helvetica,sans-serif;
 	padding:0;
@@ -36,12 +38,11 @@ footer a {
 }
 
 header li {
-	display: inline;
 	padding: 0 20px 0 20px;
 }
 
 header #branding {
-	float: left;
+	text-align: center;
 }
 
 header #branding h1 {
@@ -49,7 +50,7 @@ header #branding h1 {
 }
 
 header nav{
-	float: right;
+	text-align: center;
 	margin-top: 10px;
 }
 
@@ -68,7 +69,6 @@ header .current a {
 #showcase img {
 	width: 400px;
 	height: 400px;
-	float: left;
 	margin-top: 20px;
 }
 
@@ -86,15 +86,12 @@ header .current a {
 }
 
 #boxes {
-	margin-top:20px;
+	margin-top: 20px;
 }
 
 #boxes .box {
-	float: left;
 	text-align: center;
-	width: 30%;
 	padding: 10px;
-	min-width: 300px;
 }
 
 #boxes .box img {

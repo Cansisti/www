@@ -1,0 +1,24 @@
+@media screen and (min-width: 900px) {
+	header #branding {
+		float: left;
+	}
+
+	header nav{
+		float: right;
+	}
+
+	header li {
+		display: inline;
+	}
+
+	#showcase img {
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#boxes .box {
+		float: left;
+		width: 30%;
+	}
+}
