@@ -21,4 +21,12 @@
 		float: left;
 		width: 30%;
 	}
+
+	.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.grid-container-item {
+		grid-column: auto;
+	}
 }
