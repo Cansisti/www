@@ -1,7 +1,12 @@
 @import	url(desktop.css);
 
+@font-face {
+    font-family: "YeonSung-Regular";
+    src: url(../font/YeonSung-Regular.ttf) format("truetype");
+}
+
 body {
-	font: 15px/1.5 Arial, Helvetica,sans-serif;
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
 	padding:0;
 	margin:0;
 	background-color:#f4f4f4;
@@ -11,6 +16,17 @@ body {
 	width: 80%;
 	margin: auto;
 	overflow: hidden;
+}
+
+.grid-container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	display: grid;
+}
+
+.grid-container-item {
+	margin: 10%;
 }
 
 header ul {
@@ -79,6 +95,7 @@ header .current a {
 }
 
 #quote {
+	font: 15px/1.5 "YeonSung-Regular", Helvetica, sans-serif;
 	padding: 15px;
 	color: #f4f4f4;
 	background: #35424a;
