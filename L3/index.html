@@ -5,23 +5,26 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="game.js"></script>
 	</head>
-	<body onload="init(4, 4, null)">
+	<body onload="prepare()">
+		<label>Width</label>
+		<input type="number" id="width" value="4"/>
+		<label>Height</label>
+		<input type="number" id="height" value="4"/>
+		<button onmousedown="restart()">Restart</button>
 		<canvas id="canvas"></canvas>
-		<input type="number"/>
-		<input type="number"/>
 		<div class="gallery">
-			<img src="img/small/0.jpg"/>
-			<img src="img/small/1.jpg"/>
-			<img src="img/small/2.jpg"/>
-			<img src="img/small/3.jpg"/>
-			<img src="img/small/4.jpg"/>
-			<img src="img/small/5.jpg"/>
-			<img src="img/small/6.jpg"/>
-			<img src="img/small/7.jpg"/>
-			<img src="img/small/8.jpg"/>
-			<img src="img/small/9.jpg"/>
-			<img src="img/small/10.jpg"/>
-			<img src="img/small/11.jpg"/>
+			<img src="img/small/0.jpg" onmousedown="start(0)"/>
+			<img src="img/small/1.jpg" onmousedown="start(1)"/>
+			<img src="img/small/2.jpg" onmousedown="start(2)"/>
+			<img src="img/small/3.jpg" onmousedown="start(3)"/>
+			<img src="img/small/4.jpg" onmousedown="start(4)"/>
+			<img src="img/small/5.jpg" onmousedown="start(5)"/>
+			<img src="img/small/6.jpg" onmousedown="start(6)"/>
+			<img src="img/small/7.jpg" onmousedown="start(7)"/>
+			<img src="img/small/8.jpg" onmousedown="start(8)"/>
+			<img src="img/small/9.jpg" onmousedown="start(9)"/>
+			<img src="img/small/10.jpg" onmousedown="start(10)"/>
+			<img src="img/small/11.jpg" onmousedown="start(11)"/>
 		</div>
 	</body>
 </html>
