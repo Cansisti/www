@@ -6,7 +6,7 @@ body {
 main {
 	padding: 2px;
 	background-color: #1d1d1d;
-	width: 50%;
+	max-width: 950px;
 	margin: auto;
 	color: aliceblue;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -18,7 +18,7 @@ h1 {
 
 nav {
 	padding: 1px;
-	width: 50%;
+	max-width: 475px;
 	margin: auto;
 	background-color: #101010;
 	text-align: center;
@@ -32,24 +32,24 @@ nav ul {
 
 section {
 	padding: 0px 20px 0px 20px;
-	width: 85%;
+	max-width: 800px;
 	height: auto;
 	margin: auto;
 }
 
 article {
-	width: 90%;
+	max-width: 720px;
 	height: auto;
 	margin: auto;
 }
 
 article p {
-	width: 95%;
+	max-width: 684px;
 	margin: auto;
 }
 
 article pre {
-	width: 95%;
+	max-width: 684px;
 	margin: auto;
 }
 

@@ -45,11 +45,11 @@
 					<p>Dana jest wiadomość \(m\) w postaci łańcuacha binarnego \(m=m_1m_2...m_t\) i klucz publiczny \((n, y)\).</p>
 					<pre><code>
 for \(i = 1\) to \(t\)
-	choose random \(x \in \, \mathbb{Z}_n^*\)
-	if \(m_i = 1\) then
-		\(c_i \leftarrow yx^2 \; mod \; n\)
-	else
-		\(c_i \leftarrow x^2 \; mod \; n\)
+  choose random \(x \in \, \mathbb{Z}_n^*\)
+  if \(m_i = 1\) then
+    \(c_i \leftarrow yx^2 \; mod \; n\)
+  else
+    \(c_i \leftarrow x^2 \; mod \; n\)
 					</code></pre>
 					<p>Kryptogram stanowi \(c=c_1c_2...c_t\).</p>
 				</article>
@@ -58,11 +58,11 @@ for \(i = 1\) to \(t\)
 					<p>Dany jest kryptogram \(c\) i klucz prywatny \((p, q)\).</p>
 					<pre><code>
 for \(i = 1\) to \(t\)
-	\(e_i=(\frac{c_i}{p})\)
-	if \(e_i = 1\) then
-		\(m_i \leftarrow 0\)
-	else
-		\(m_i \leftarrow 1\)
+  \(e_i=(\frac{c_i}{p})\)
+  if \(e_i = 1\) then
+    \(m_i \leftarrow 0\)
+  else
+    \(m_i \leftarrow 1\)
 					</code></pre>
 					<p>Wiadomość to \(m=m_1m_2...m_t\).</p>
 				</article>
@@ -156,24 +156,24 @@ for \(i = 1\) to \(t\)
 					<pre><code>
 JACOBI(\(n\), \(a\)):
 if \(a = 0\)
-	return 0
+  return 0
 if \(a = 1\)
-	return 1
+  return 1
 write \(a=2^ea_1\), assuming \(a_1\) odd
 if \(e\) even
-	\(s \leftarrow 1\)
+  \(s \leftarrow 1\)
 else
-	if \(n \equiv 1\) or \(7 \; \left(mod \; 8 \right)\)
-		\(s \leftarrow 1\)
-	if \(n \equiv 3\) or \(5 \; \left(mod \; 8 \right)\)
-		\(s \leftarrow -1\)
+  if \(n \equiv 1\) or \(7 \; \left(mod \; 8 \right)\)
+    \(s \leftarrow 1\)
+  if \(n \equiv 3\) or \(5 \; \left(mod \; 8 \right)\)
+    \(s \leftarrow -1\)
 if \(n \equiv 3 \; \left(mod \; 4 \right)\) and \(a_1 \equiv 1 \; \left(mod \; 4 \right)\)
-	\(s \leftarrow -s\)
+  \(s \leftarrow -s\)
 \(n_1 \leftarrow n \; \left(mod \; a_1 \right)\)
 if \(a_1 = 1\)
-	return s
+  return s
 else
-	return \(s\cdot\)JACOBI(\(n_1\), \(a_1\))
+  return \(s\cdot\)JACOBI(\(n_1\), \(a_1\))
 					</code></pre>
 				</article>
 			</section>
