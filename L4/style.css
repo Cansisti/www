@@ -1,0 +1,58 @@
+body {
+	font-size: 24px;
+	background-color: #0f0f0f;
+}
+
+main {
+	padding: 2px;
+	background-color: #1d1d1d;
+	width: 50%;
+	margin: auto;
+	color: aliceblue;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+	text-align: center;
+}
+
+nav {
+	padding: 1px;
+	width: 50%;
+	margin: auto;
+	background-color: #101010;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-decoration: none;
+}
+
+nav ul {
+	text-align: left;
+}
+
+section {
+	padding: 0px 20px 0px 20px;
+	width: 85%;
+	height: auto;
+	margin: auto;
+}
+
+article {
+	width: 90%;
+	height: auto;
+	margin: auto;
+}
+
+article p {
+	width: 95%;
+	margin: auto;
+}
+
+article pre {
+	width: 95%;
+	margin: auto;
+}
+
+article ul li {
+	padding: 10px 0px 10px 0px;
+}
