@@ -26,6 +26,7 @@
 					<li><a href="#3">Symbol Legendre'a i Jacobiego</a href="#2"></li>
 					<li><a href="#4">Schemat progowy \((t,n)\) dzielenia sekretu Shamira</a href="#2"></li>
 					<li><a href="#5">Interpolacja Lagrange'a</a href="#5"></li>
+					<li><a href="#6">Przykład dzielenia sekretu</a></li>
 				</ul>
 			</nav>
 			<section id="1">
@@ -217,8 +218,54 @@ else
 						<b>Wskazówka:</b>
 						w schemacie Shamira, aby odzyskać sekret \(S\), uczestnicy nie muszą znać całego wielomianu \(f\). Wstawiając do wzoru na interpolację Lagrange'a \(x=0\), dostajemy wersję uproszczoną, ale wystarczającą, by policzyć sekret \(S=f(0)\):
 						$$
-							f(x) = \sum_{i=1}^{t} \left( y_i \prod_{ 1 \leqslant j \leqslant t, \, j \neq i } \frac{x_j}{x_i-x_j} \right) \; mod \; p
+							f(0) = \sum_{i=1}^{t} \left( y_i \prod_{ 1 \leqslant j \leqslant t, \, j \neq i } \frac{x_j}{x_i-x_j} \right) \; mod \; p
 						$$
+					</p>
+				</article>
+			</section>
+			<section id="6">
+				<h2>Przykład dzielenia sekretu</h2>
+				<article>
+					<h4>Przygotowanie i podzielenie sekretu</h4>
+					<p>
+						Weźmy przykładowe \(S = 12\) i załóżmy, że dzielimy go pomiędzy czterech uczestników, tak żeby trzech mogło go odtworzyć, czyli \(n=4\) i \(t=3\).
+					</p>
+					<br>
+					<p>
+						W tym przypadku \(p = 13\). Niech \(a_0 = S = 12\). Potrzebne są jeszcze \(a_1\) i \(a_2\). Niech będą to odpowiednio, wybrane losowo, \(7\) i \(2\).
+					</p>
+					<br>
+					<p>
+						Nasz wielomian to \(f(x) = 12 + 7x + 2x^2\).
+					</p>
+					<br>
+					<p>
+						Wybierzmy cztery \(x_i\) dla uczestników i policzmy dla nich \(S_i\):
+						$$ f(4) \; mod \; 13 = 7 $$
+						$$ f(5) \; mod \; 13 = 6 $$
+						$$ f(6) \; mod \; 13 = 9 $$
+						$$ f(7) \; mod \; 13 = 3 $$
+					</p>
+					<br>
+					<p>
+						Stąd pary: \((4, 7)\), \((5, 6)\), \((6, 9)\) i \((7, 3)\) zostają rozdysponowane między uczestników.
+					</p>
+				</article>
+				<article>
+					<h4>Odzyskiwanie sekretu</h4>
+					<p>
+						Załóżmy, że sekret odzyskać chcą uczestnicy z parami \((4, 7)\), \((6, 9)\) i \((7, 3)\). To wystarczy, aby poznać \(S\). Korzystamy z uproszczonej interpolacji Lagrange'a (dla \(f(0)\)).
+					</p>
+					<br>
+					<p>
+						Policzmy kolejne części sumy:
+						$$7 \cdot \frac{6}{4-6} \cdot \frac{7}{4-7} = 49$$
+						$$9 \cdot \frac{4}{6-4} \cdot \frac{7}{6-7} = -126$$
+						$$3 \cdot \frac{4}{7-4} \cdot \frac{6}{7-6} = 24 $$
+					</p>
+					<p>
+						Po zsumowaniu:
+						$$f(0) = \left( 49 - 126 + 24 \right) \; mod \; 13 = -53 \; mod \; 13 = 12 = S$$
 					</p>
 				</article>
 			</section>
