@@ -17,14 +17,30 @@ var _currentDropPiece;
 var _idx = 0;
 
 var _images;
+var _small;
+var _images_promise;
 
 var _mouse;
 
 function prepare() {
 	_images = new Array(12);
+	_small = new Array(12);
+	_images_promise = new Array(12);
 	for(var i = 0; i<12; i++) {
-		_images[i] = new Image();
-		_images[i].src = "img/big/" + i + ".jpg";
+		_images_promise[i] = new Promise(function(resolve, reject) {
+			_small[i] = new Image();
+			_small[i].src = "img/small/" + i + ".jpg";
+			_images[i] = new Image();
+			_images[i].src = "img/big/" + i + ".jpg";
+
+			if(_images[i]) {
+				resolve(_images[i]);
+			}
+			else {
+				reject(_small[i]);
+			}
+		});
+		console.log(_images_promise[i]);
 	}
 }
 
@@ -40,11 +56,15 @@ function restart() {
 
 function init() {
 	console.log("init");
-	_img = _images[_idx];
-	PUZZLE_SIZE_W = parseInt(document.getElementById("width").value);
-	PUZZLE_SIZE_H = parseInt(document.getElementById("height").value);
-	_img.onload = onImage();
-	console.log("-init");
+	_images_promise[_idx].then(function(img) {
+		_img = img;
+		PUZZLE_SIZE_W = parseInt(document.getElementById("width").value);
+		PUZZLE_SIZE_H = parseInt(document.getElementById("height").value);
+		_img.onload = onImage();
+		console.log("-init");
+	}).catch(function(img) {
+		console.log("Nie udało się :c");
+	})
 }
 
 function onImage(e) {

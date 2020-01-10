@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 	<head>
@@ -28,6 +31,7 @@
 					<li><a href="#4">Schemat progowy \((t,n)\) dzielenia sekretu Shamira</a href="#2"></li>
 					<li><a href="#5">Interpolacja Lagrange'a</a href="#5"></li>
 					<li><a href="#6">Przykład dzielenia sekretu</a></li>
+					<li><a href="login.php">Zaloguj</a></li>
 				</ul>
 			</nav>
 			<section id="1">
